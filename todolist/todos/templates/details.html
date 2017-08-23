@@ -1,4 +1,8 @@
-<h1>{{ todo.title }}</h1>
-<p>{{ todo.text }}</p>
-<br>
-Create on {{ todo.created_at }}
+{% include 'partials/header.html' %}
+  <a href="{% url 'index' %}"><<</a>
+  <h1>{{ todo.title }}</h1>
+  <p>{{ todo.text }}</p>
+  <br>
+  Create on {{ todo.created_at }}
+
+{% include 'partials/footer.html' %}

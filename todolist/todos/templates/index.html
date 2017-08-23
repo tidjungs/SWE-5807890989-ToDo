@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <h1>TodoList</h1>
-    <hr />
-  </header>
-  <ul>
-    {% for todo in todos %} 
-      <li><a href="{% url 'details' todo.id %}">{{ todo.title }}</a>: {{ todo.text }}</li>
-    {% endfor %}
-  </ul>
-</body>
-</html>
+{% include 'partials/header.html' %}
+<ul>
+  {% for todo in todos %} 
+    <li><a href="{% url 'details' todo.id %}">{{ todo.title }}</a>: {{ todo.text }}</li>
+  {% endfor %}
+</ul>
+
+{% include 'partials/footer.html' %}
